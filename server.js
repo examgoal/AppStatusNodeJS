@@ -11,7 +11,7 @@ app.get('/healthCheck', (req, res, next)=>{
 
 //Old Routes of GitHub
 
-app.get('/gateapp/checksys.json', (req, res, next)=>{
+app.get(['/gateapp/checksys.json', '/gateapp//checksys.json'], (req, res, next)=>{
     return res.send({
         maintain: false,
         server_alive: true,
@@ -19,7 +19,7 @@ app.get('/gateapp/checksys.json', (req, res, next)=>{
     });
 });
 
-app.get('/jeemainQ/checksys.json', (req, res, next)=>{
+app.get(['/jeemainQ/checksys.json', '/jeemainQ//checksys.json'], (req, res, next)=>{
     return res.send({
         maintain: false,
         server_alive: true,
@@ -27,7 +27,7 @@ app.get('/jeemainQ/checksys.json', (req, res, next)=>{
     });
 });
 
-app.get('/gateapp/sysevents.json', (req, res, next)=>{
+app.get(['/gateapp/sysevents.json', '/gateapp//sysevents.json'], (req, res, next)=>{
    return res.send(
        {
            "events": [],
@@ -39,14 +39,14 @@ app.get('/gateapp/sysevents.json', (req, res, next)=>{
        });
 });
 
-app.get('/jeemainQ/sysevents.json', (req, res, next)=>{
+app.get(['/jeemainQ/sysevents.json', '/jeemainQ//sysevents.json'], (req, res, next)=>{
     return res.send(
         {
-            "events": [],
-            "sample_event":{
-                "event_title": null,
-                "event_description": null,
-                "event_date": null
+            events: [],
+            sample_event:{
+                event_title: null,
+                event_description: null,
+                event_date: null
             }
         });
 });
