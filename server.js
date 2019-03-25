@@ -6,7 +6,7 @@ const apps = require('./apps');
 
 //AWS Health Check
 app.get('/healthCheck', (req, res, next)=>{
-    return res.send({status: 'ok'});
+    return res.send({status: 'ok', time: new Date()});
 });
 
 //Old Routes of GitHub
@@ -56,7 +56,7 @@ app.use('/apps', apps);
 
 app.use('*', (req, res, next)=>{
 
-   return res.status(404).send("404 Not Found");
+   return res.status(404).send({status: "404 Page Not Found"});
 
 });
 
