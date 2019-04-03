@@ -21,9 +21,9 @@ app.get(['/gateapp/checksys.json', '/gateapp//checksys.json'], (req, res, next)=
 
 app.get(['/jeemainQ/checksys.json', '/jeemainQ//checksys.json'], (req, res, next)=>{
     return res.send({
-        maintain: true,
-        server_alive: false,
-        msg: "Our System is now under schedule maintenance. Our App will be responsive again on 4th April 2019, 02:00 AM Indian Standard Time. Sorry for the inconvenience."
+        maintain: false,
+        server_alive: true,
+        msg: null
     });
 });
 
