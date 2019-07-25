@@ -66,3 +66,5 @@ app.use('*', (req, res, next) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log('App Started at http://localhost:' + (process.env.PORT || 3000));
 });
+
+module.exports = app;
