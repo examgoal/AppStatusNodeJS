@@ -9,7 +9,7 @@ script:
   - docker run examgoal/app-status-nodejs npm run test
 
 deploy:
-  - provider: elaticbeanstalk
+  - provider: elasticbeanstalk
     region: ap-south-1
     app: "AppStatusNodeJS"
     env: "DOCKER-SC"
