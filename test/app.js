@@ -14,7 +14,7 @@ describe("V1 Routes", ()=>{
 
     describe("APPS", ()=>{
 
-        ['jee-main-q', 'gate-q'].forEach(el=>{
+        ['jee-main-q', 'gate-q', 'neet-questions'].forEach(el=>{
             describe(el, ()=>{
 
                 it("SYSTEM EVENTS", (done)=>{

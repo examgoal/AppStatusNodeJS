@@ -4,6 +4,8 @@ const app = express();
 
 const apps = require('./apps');
 
+app.disable('x-powered-by');
+
 //AWS Health Check
 app.get('/healthCheck', (req, res, next) => {
     return res.send({
